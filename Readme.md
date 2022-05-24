@@ -31,7 +31,7 @@ Hardware:
 ### Flashing
 
 * Flash micronucleus
-* Set the fuses as in thuis Makefile: HFUSE=0x5d, LFUSE=0xe1, EFUSE=0xfe
+* Set the fuses as in this Makefile: HFUSE=0x5d, LFUSE=0xe1, EFUSE=0xfe
 * Flash the firmware with micronucleus
 
 ### Hardware ###
