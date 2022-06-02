@@ -5,13 +5,12 @@
  */
 #ifndef __TPI_H__
 #define __TPI_H__
+#include <avr/io.h>
 #include <stdint.h>
-
 
 /* Globals */
 /** Number of iterations in tpi_delay loop */
 extern uint16_t tpi_dly_cnt;
-
 
 /* Functions */
 /**
@@ -34,14 +33,13 @@ uint8_t tpi_recv_byte(void);
  * \param dptr Pointer to dest memory block
  * \param len Length of read
  */
-void tpi_read_block(uint16_t addr, uint8_t* dptr, uint8_t len);
+void tpi_read_block(uint16_t addr, uint8_t *dptr, uint8_t len);
 /**
  * Write block
  * \param addr Address to program
  * \param sptr Pointer to source block
  * \param len Length of write
  */
-void tpi_write_block(uint16_t addr, const uint8_t* sptr, uint8_t len);
-
+void tpi_write_block(uint16_t addr, const uint8_t *sptr, uint8_t len);
 
 #endif /*__TPI_H__*/

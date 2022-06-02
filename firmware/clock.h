@@ -9,19 +9,19 @@
  */
 
 #ifndef __clock_h_included__
-#define	__clock_h_included__
-
+#define __clock_h_included__
+#include <avr/io.h>
 //#define F_CPU           12000000L   /* 12MHz */ Moved to Makefile
-#define TIMERVALUE      TCNT0
+#define TIMERVALUE TCNT0
 //#define CLOCK_T_320us	60
-#define CLOCK_T_320us	((5*F_CPU)/1000000)
+#define CLOCK_T_320us ((5 * F_CPU) / 1000000)
 
 #ifdef __AVR_ATmega8__
-#define TCCR0B  TCCR0
+#define TCCR0B TCCR0
 #endif
 
 /* set prescaler to 64 */
-#define clockInit()  TCCR0B = (1 << CS01) | (1 << CS00);
+#define clockInit() TCCR0B = (1 << CS01) | (1 << CS00);
 
 /* wait time * 320 us */
 void clockWait(uint8_t time);
